@@ -1,8 +1,13 @@
 # bb_variability
 Study the Bayesian block variability index applied to Fermi-Lat data
 
-## Data file: `files/var_info.csv'
-This is a DataFrame with index the 4FGL-DR4 name. Relevant columns
+## Data file: `files/var_info.csv`
+This is a table with index the 4FGL-DR4 name. To access as a DataFrame:
+```
+df = pd.read_csv('files/var_info.csv', index_col=0)
+```
+
+Relevant columns
 * glat, glon : Galactic coordinates
 * nbb : number of blocks
 * variability: the 4FGL variability index: it should be distributed as chi-squared with 13 degrees of freedom
